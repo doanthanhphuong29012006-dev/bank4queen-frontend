@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const axiosClient = axios.create({
-  baseURL: 'https://bank4queen-backend-production.up.railway.app/api', 
+  baseURL: 'https://bank4queen-backend-production.up.railway.app', 
   headers: {
     'Content-Type': 'application/json',
   },
