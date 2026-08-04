@@ -10,8 +10,9 @@ export default function DashboardLayout() {
 
   useEffect(() => {
     // Khởi tạo kết nối WebSocket tới máy chủ Backend
-    const socket = io('http://localhost:5000', {
+    const socket = io('https://bank4queen-backend-production.up.railway.app', {
       withCredentials: true,
+      transports: ['websocket', 'polling'], // Khai báo phương thức vận chuyển để tránh xung đột CORS của Socket
     });
 
     const initializeSocketConnection = async () => {

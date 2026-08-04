@@ -18,7 +18,7 @@ export default function Login() {
       const response = await authApi.login(data);
       
       // Lưu token vào localStorage
-      localStorage.setItem('accessToken', response.accessToken);
+      localStorage.setItem('accessToken', response.data.accessToken);
       
       // Chuyển hướng vào trang Dashboard
       navigate('/dashboard');
